@@ -60,7 +60,7 @@ const BufferJSON = {
   },
 };
 
-const PgAuthState = async () => {
+const PgAuthState = async (sessionId) => {
   const writeData = async (data, id) => {
     const informationToStore = JSON.parse(
       JSON.stringify(data, BufferJSON.replacer)
@@ -89,7 +89,6 @@ const PgAuthState = async () => {
     }
   };
 
-  const sessionId = config.SESSION_ID;
   const creds = (await readData(sessionId)) || initAuthCreds();
   return {
     state: {
