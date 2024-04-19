@@ -7,18 +7,20 @@
     },
     "dependencies": {
         "@colors/colors": "1.5.0",
-        "@whiskeysockets/baileys": "github:C-iph3r/Baileys",
+        "@whiskeysockets/baileys": "^6.6.0",
         "awesome-phonenumber": "^2.64.0",
-        "archiver": "^7.0.1",
         "body-parser": "^1.20.1",
         "cfonts": "~2.10.0",
         "chalk": "~4.1.0",
         "express": "^4.18.1",
         "axios": "^0.27.2",
-        "mongodb": "^6.5.0",
+        "fs": "^0.0.1-security",
         "path": "^0.12.7",
+        "pg": "^8.11.3",
         "phone": "3.1.30",
         "pino": "^8.1.0",
         "qrcode": "^1.5.3"
+        "sqlite3": "^5.0.11",
+        "sequelize": "^6.21.4",
     }
 }
