@@ -1,4 +1,4 @@
-const { makeid } = require('../database/id');
+const { makeid2 } = require('../database/id');
 const { PgAuthState } = require('../database/session');
 const QRCode = require('qrcode');
 const express = require('express');
@@ -8,7 +8,7 @@ let router = express.Router()
 
 
 router.get('/', async (req, res) => {
-    const sessionId = makeid();
+    const sessionId = makeid2();
     async function Getqr() {
         const { state, saveCreds } = await PgAuthState(sessionId);
         try {
