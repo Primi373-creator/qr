@@ -28,6 +28,13 @@ const initAuthCreds = () => {
     accountSettings: {
       unarchiveChats: false,
     },
+    deviceId: Buffer.from(uuidv4().replace(/-/g, ''), 'hex').toString('base64'),
+    phoneId: uuidv4(),
+    identityId: randomBytes(20),
+    registered: false,
+    backupToken: randomBytes(20),
+    registration: {},
+    pairingCode: undefined,
   };
 };
 
