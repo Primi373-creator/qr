@@ -3,6 +3,7 @@ const { generateRegistrationId } = require("@whiskeysockets/baileys/lib/Utils/ge
 const { randomBytes } = require("crypto");
 const { Sequelize, DataTypes } = require('sequelize');
 const config = require("../config");
+const { v4: uuidv4 } = require('uuid');
 
 const AuthState = config.DATABASE.define('AuthState', {
   id: {
